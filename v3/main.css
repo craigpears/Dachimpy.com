@@ -1,0 +1,304 @@
+#wrapper { 
+ margin: 0 auto;
+ width: 1000px;
+}
+#header {
+ color: #333;
+ width: 900px;
+ float: left;
+ padding: 0px;
+ height: 137px;
+ margin: 10px 0px 5px 0px;
+}
+#navigation {
+ float: left;
+ width: 902px;
+ margin: 0px 0px 5px 0px;
+ background: #163C6D;
+}
+#maincolumn { 
+ float: left;
+ color: #333;
+ margin: 0px 0px 5px 0px;
+ padding: 0px;
+ width: 900px;
+ display: inline;
+}
+#footer { 
+ width: 920px;
+ clear: both;
+ margin: 0px;
+ padding: 0px;
+ font-family:"Verdana";
+ font-size: 11px;
+ text-align:center;
+}
+
+#commentsFeed
+{
+text-align:left;
+}
+
+a.videoTitle:link {color: blue; text-decoration: none; font-family:"Verdana"; font-size: 16px;}
+a.videoTitle:visited {color: blue; text-decoration: none; font-family:"Verdana"; font-size: 16px;} 
+a.videoTitle:hover {color: blue; text-decoration: underline; font-family:"Verdana"; font-size: 16px;}
+a.videoTitle:active {color: blue; text-decoration: underline; font-family:"Verdana"; font-size: 16px;}
+
+a.largeLink:link {color: blue; text-decoration: none; font-family:"Verdana"; font-size: 24px;}
+a.largeLink:visited {color: blue; text-decoration: none; font-family:"Verdana"; font-size: 24px;} 
+a.largeLink:hover {color: blue; text-decoration: underline; font-family:"Verdana"; font-size: 24px;}
+a.largeLink:active {color: blue; text-decoration: underline; font-family:"Verdana"; font-size: 24px;}
+
+
+#TEXTBOX{
+background: #FFFFFF;
+width:100%;
+font-family:"Verdana";
+font-size:15;
+padding-top:5px;
+}
+
+/*
+	Description and image are for displaying a description next to an image.  The image is displayed to the right with the description to the left of it.
+*/
+
+#description
+{
+	width: 55%;
+	float:left;
+}
+
+#image
+{
+	width: 45%;
+	float:right;
+}
+
+#video{
+	border-radius: 15px;
+	background:lightgrey;
+	padding: 10px;
+	width:99%;
+}
+
+#TITLEFRAME{
+font-size:24px;
+width:100%;
+font-family:"Verdana";
+margin-bottom: 5px;
+}
+
+#tip
+{
+	font-size: 20;
+	font-family:Comic Sans MS;
+	padding: 3px 3px 3px 3px;
+}
+
+#updates
+{
+	width:716px;
+	height:242px;
+	float:left;
+	overflow:hidden;
+}
+
+#poll
+{
+	width:180px;
+	float:right;
+	vertical-align:bottom;
+	height: 244px;
+}
+
+td.tableHeader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 12pt;
+	font-weight: bold;
+	background-color: #112751;
+	text-align: center;
+	padding: 2;
+	border: groove 2px #022B6B;
+}
+
+table.sitetable {
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 1px #000000;
+	font-size: 12px;
+	text-align: center;
+	vertical-align:top;
+}
+table.plaintable{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 12px;
+	text-align: center;
+}
+
+td.plaintd{
+	color: #000000;
+	padding:1;
+	background-color: #FFFFFF;
+	margin-left:auto;
+	margin-right:auto;
+	vertical-align:top;
+}
+
+td.sitetblrow {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: center;
+	padding:1;
+	border: solid 1px #000000;
+	background-color: #FFFFFF;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*************************
+******** Arrows **********
+**************************/	
+div.piracyCarousel .prev{
+	background: url('./jMyCarousel/img/left.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+div.piracyCarousel .next{
+	background: url('./jMyCarousel/img/right.png') center center no-repeat;
+	width:40px;
+	height:61px;
+	border:0px;
+}
+div.piracyCarousel .up{
+	background: url('./jMyCarousel/img/up.png') center center no-repeat;
+	width:61px;
+	height:40px;
+	border:0px;
+}
+
+div.piracyCarousel .down{
+	background: url('./jMyCarousel/img/down.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+
+
+/** carousel 1 **/
+div.piracyCarousel ul li{
+	border:1px solid #fff;
+	line-height:0px;
+}
+
+div.piracyCarousel ul li a{ /* in case of link */
+	display:block;
+	border:0px;
+}
+
+div.piracyCarousel ul li a img{
+	display:block;
+	border:0px;
+}
+
+/*************************
+******** Arrows **********
+**************************/	
+div.carousingCarousel .prev{
+	background: url('./jMyCarousel/img/left.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+div.carousingCarousel .next{
+	background: url('./jMyCarousel/img/right.png') center center no-repeat;
+	width:40px;
+	height:61px;
+	border:0px;
+}
+
+/** carousel 1 **/
+div.carousingCarousel ul li{
+	border:1px solid #fff;
+	line-height:0px;
+}
+
+div.carousingCarousel ul li a{ /* in case of link */
+	display:block;
+	border:0px;
+}
+
+div.carousingCarousel ul li a img{
+	display:block;
+	border:0px;
+}
+
+/*************************
+******** Arrows **********
+**************************/	
+div.craftingCarousel .prev{
+	background: url('./jMyCarousel/img/left.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+div.craftingCarousel .next{
+	background: url('./jMyCarousel/img/right.png') center center no-repeat;
+	width:40px;
+	height:61px;
+	border:0px;
+}
+
+
+/** carousel 1 **/
+div.craftingCarousel ul li{
+	border:1px solid #fff;
+	line-height:0px;
+}
+
+div.craftingCarousel ul li a{ /* in case of link */
+	display:block;
+	border:0px;
+}
+
+div.craftingCarousel ul li a img{
+	display:block;
+	border:0px;
+}
+
+/*************************
+******** Arrows **********
+**************************/	
+div.applicationsCarousel .prev{
+	background: url('./jMyCarousel/img/left.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+div.applicationsCarousel .next{
+	background: url('./jMyCarousel/img/right.png') center center no-repeat;
+	width:40px;
+	height:61px;
+	border:0px;
+}
+
+/** carousel 1 **/
+div.applicationsCarousel ul li{
+	border:1px solid #fff;
+	line-height:0px;
+}
+
+div.applicationsCarousel ul li a{ /* in case of link */
+	display:block;
+	border:0px;
+}
+
+div.applicationsCarousel ul li a img{
+	display:block;
+	border:0px;
+}
+

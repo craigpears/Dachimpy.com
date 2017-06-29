@@ -1,0 +1,30 @@
+<?php
+class controller_articles extends controller_base_class
+{
+	public function __construct()
+	{
+            parent::__construct();
+	}
+        
+        public function index() {
+            die("This page is under construction");
+        }
+
+        public function view() {
+            return $this->index();
+        }
+        
+        public function blockade_for_the_challenge() {
+            $this->display_page('articles/blockade_for_the_challenge');
+        }
+        
+        public function pp_myths() {
+            $this->display_page('articles/pp_myths');
+        }
+        
+        public function carpentry_guide() {
+            $this->display_page('articles/carpentry_guide');
+        }
+    
+}
+?>

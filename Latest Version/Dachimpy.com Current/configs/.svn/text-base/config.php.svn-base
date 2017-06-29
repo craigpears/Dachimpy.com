@@ -1,0 +1,10 @@
+<?php
+    # Define some constants
+    define('SMARTY_DIR',WEBSITE_DIR . 'libraries/Smarty-3.1.7/libs/');
+    
+    define('DB_LOCAL','127.0.0.1');
+    define('DB_USER','root');
+    define('DB_PASSWORD','net10craig');
+    
+    $GLOBALS['database_connection'] = new mysqli(DB_LOCAL, DB_USER, DB_PASSWORD, 'dachimpy_site');
+?>

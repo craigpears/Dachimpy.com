@@ -1,0 +1,35 @@
+<? include_once("http://www.dachimpy.com/Slidedeck/tipsHeader.html"); ?>
+<? 
+	
+		include_once("../dbConnect.php"); 
+		$cat=$_GET['category'];
+		$sql="SELECT * FROM tip WHERE category=$cat";
+		?>
+		<style type="text/css">
+			#slidedeck_frame {
+				width: 890px;
+				height: 400px;
+			}        
+		</style>
+		<?
+	
+	$result=mysql_query($sql);
+	if(mysql_num_rows($result))
+	{
+		?>		
+		<div id="slidedeck_frame" class="skin-slidedeck">
+			<dl class="slidedeck">
+				<?
+					while($row = mysql_fetch_array($result))
+					{
+					
+						?><dt><?echo $row['Title'];?></dt><dd><div id="tip"><?echo$row['tip'];?></div></dd><?		
+					}
+				?>
+			</dl>
+		</div>
+		<script type="text/javascript">
+			$('.slidedeck').slidedeck();
+		</script>
+		<?
+	}?>

@@ -1,0 +1,10 @@
+TODO
+Get a proper bug reporting system
+Video playlist boxes are wider than the container should allow
+check bludgeon demo videos
+add more object-oriented code, e.g. for the lists
+improve the breadcrumbs and add them to each page
+review the view counts for pages, do you want them for articles?
+the playlist_video css class has become more generic and should be looked at
+create an index page for applications
+automatically generate the list of articles in the menu from the db

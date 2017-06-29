@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Collision Mechanics</title>
+</head>
+
+<body>
+<p><a href="http://www.freewebs.com/dachimpy/BnavGuide.html">Back</a></p>
+<p>Collision Mechanics</p>
+<p>Bnav would be a bit silly if ships could pass through each other, so this page is to explain how collision works. Note that this only covers the mechanics for two ships being the same size, ship class collision will come later when it is relevant. </p>
+<p>I am going to  explain how the ships actually move, once you understand that then collision is fairly logical rather than having to memorise all the rules stated on the wiki.</p>
+<p>Ships DO NOT move diagonally! A left or right is comprised of two movements, first the ship moves to the square in front, then it moves to the square at the side, then it rotates the ship. The following is the way my programs handle movement and collisions, which at the very least mimics the way that it is done on YPP.</p>
+<p>Phase 1: Calculate both the squares the ships want to go to in their forward move, which will either be nothing if they are staying still or one space in front for any other. If these two squares are the same or both ships land on the square that the other started at (Which would be passing through each other) then a collision has happened, and all movement is stopped and we skip to the rotation phase. If there is no collision then the ships move. </p>
+<p>If after phase 1 there is a collision and the only ship that moved was going forward, the other ship will be bumped backwards. </p>
+<p>Phase 2: Calculate both the squares the ships want to go to in their turning move, which will be nothing for staying still and going forward and the relative squares either side for left and right. If both ships try to go to the same square, both go to the square the other started at in that phase, or only one moves and tries to go to the other ships position then a collision has occured all movement is stopped and we continue to the rotation phase.</p>
+<p>Rotation Phase: Any ship rotation for turns takes place, this happens regardless of whether or not there is a collision.  </p>
+<p>&nbsp;</p>
+<p>I will now try and explain my method by comparing it with the rules in the wiki, found <a href="http://yppedia.puzzlepirates.com/Collision_mechanics">here</a> </p>
+<p>&nbsp;</p>
+<h2>Collision Rules</h2>
+<ul>
+  <li> 1. All ships that are moving (regardless of direction) attempt  to &quot;claim&quot; the space that started directly in front of them. That space  has five possibilites:
+    <ul>
+      <li> a. That space is empty and unclaimed. Then move the ship into that space. </li>
+      <li> b. That space contains a stationary ship. Then execute a &quot;bump&quot; (see below). </li>
+      <li> c. That space contains a ship that is moving, and claiming your space. Then stop movement entirely (with a collision).</li>
+    </ul>
+  </li>
+  <li>2. All ships that are turning but have not &quot;stopped entirely&quot;  then attempt to claim their destination space. Now that space also has  five possibilities:
+    <ul>
+      <li> a. That space is empty and unclaimed. Then move the ship into that space. </li>
+      <li> b. That space contains a stationary ship OR a ship that moved there in step 1. Then stop movement entirely (with a collision). </li>
+      <li> c. That space contains a ship that is moving, and claiming your space. Then stop movement entirely (with a collision). </li>
+    </ul>
+  </li>
+  <li> Note: At the end, all ships have their orientation changed if they tried to turn... even if they had &quot;stopped entirely.&quot;
+    <h3>Bump</h3>
+    <p>A bump occurs when a moving ship attempts to move into or through the tile occupied by a stationary ship. </p>
+    <ul>
+      <li> If the moving ship is attempting to turn, then neither ship  moves, and all motion stops, but the ship attempting to turn changes  its orientation. </li>
+      <li> If the moving ship is attempting to go forward, then the  stationary ship is pushed back by one space, and the moving ship  doesn't move. </li>
+    </ul>
+  </li>
+</ul>
+<p>The first set of rules describes phase 1 of movement, and the second set of rules describes phase 2. I have removed any rules that refer to larger/smaller ship classes for simplicity. </p>
+<p>The collision mechanics page presents alot of suitable examples for all collision, I will show the same material as in the wiki but will illustrate it better step by step.</p>
+<p>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="550" height="400">
+    <param name="movie" value="SameClassCollisions.swf" />
+    <param name="quality" value="high" />
+    <embed src="SameClassCollisions.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="400"></embed>
+  </object>
+</p>
+<p>&nbsp;</p>
+<p>Wind/Whirls</p>
+<p>Wind and whirlpool collisions follow the same rules as movement collision, A wind push is the same as moving forward, and a whirl is the same as turning. An illustration of this will be made soon.  </p>
+<p>&nbsp;</p>
+<p>This simulator gives you controls of two ships to test collision mechanics for yourself.</p>
+<p>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="576" height="576">
+    <param name="movie" value="CollisionPractice.swf" />
+    <param name="quality" value="high" />
+    <embed src="CollisionPractice.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="576" height="576"></embed>
+  </object>
+</p>
+<h3>&nbsp;</h3>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="carousel_css/example1.css" />
+	<script type="text/javascript" src="../jquery-1.2.1.pack.js"></script>
+	<script type="text/javascript" src="../jMyCarousel.js"></script>
+	<!-- Optional -->
+	<script type="text/javascript" src="../jquery.mousewheel.js"></script>
+	<script type="text/javascript">
+		$(function() {
+		    $(".jMyCarousel").jMyCarousel({
+		        visible: '100%',
+			speed: 80
+		    });
+		});
+	</script>
+</head>
+
+<div id="TITLEFRAME">Piracy</div>
+<div class="jMyCarousel">
+    <ul>
+	<li><a href="http://www.dachimpy.com/index.php?category=1"><img src="./images/Puzzle images/sf.png" width="111" height="139"></a></li>
+	<li><a href="http://www.dachimpy.com/index.php?category=2"><img src="./images/Puzzle images/bilge.png" width="111" height="139"></a></li>
+	<li><a href="http://www.dachimpy.com/index.php?category=3"><img src="./images/Puzzle images/sail.png" width="111" height="139"></a></li>
+	<li><a href="http://www.dachimpy.com/index.php?category=4"><img src="./images/Puzzle images/rigging.png" width="111" height="139"></a></li>
+	<li><a href="http://www.dachimpy.com/index.php?category=5"><img src="./images/Puzzle images/nav.png" width="111" height="139"></a></li>	
+	<li><a href="http://www.dachimpy.com/index.php?category=6"><img src="./images/Puzzle images/sb.png" width="111" height="139"></a></li>
+	<li><a href="http://www.dachimpy.com/index.php?category=7"><img src="./images/Puzzle images/gun.png" width="111" height="139"></a></li>
+	<li><a href="http://www.dachimpy.com/index.php?category=8"><img src="./images/Puzzle images/carp.png" width="111" height="139"></a></li>
+	<li><a href="http://www.dachimpy.com/index.php?category=9"><img src="./images/Puzzle images/rumble.png" width="111" height="139"></a></li>
+	<li><a href="http://www.dachimpy.com/index.php?category=10"><img src="./images/Puzzle images/th.png" width="111" height="139"></a></li>
+  </ul>
+</div>
+	
+<div id="TITLEFRAME">Carousing</div>
+<table>
+<tr>
+	<td><a href="http://www.dachimpy.com/index.php?category=11"><img src="./images/Puzzle images/drink.png"/></a></td>
+	<td><a href="http://www.dachimpy.com/index.php?category=12"><img src="./images/Puzzle images/spades.png"/></a></td>
+	<td><a href="http://www.dachimpy.com/index.php?category=13"><img src="./images/Puzzle images/hearts.png"></a></td>
+	<td><a href="http://www.dachimpy.com/index.php?category=14"><img src="./images/Puzzle images/td.png"/></a></td>
+	<td><a href="http://www.dachimpy.com/index.php?category=15"><img src="./images/Puzzle images/poker.png"/></a></td>
+</tr>
+</table>
+<div id="TITLEFRAME">Crafting</div>
+<table>
+<tr>
+	<td><a href="http://www.dachimpy.com/index.php?category=16"><img src="./images/Puzzle images/distill.png"></a></td>
+	<td><a href="http://www.dachimpy.com/index.php?category=17"><img src="./images/Puzzle images/alchem.png"></a></td>
+	<td><a href="http://www.dachimpy.com/index.php?category=18"><img src="./images/Puzzle images/shipwright.png"></a></td>	
+	<td><a href="http://www.dachimpy.com/index.php?category=19"><img src="./images/Puzzle images/blacksmithing.png"></a></td>
+	<td><a href="http://www.dachimpy.com/index.php?category=20"><img src="./images/Puzzle images/foraging.png"></a></td>
+	<td><a href="http://www.dachimpy.com/index.php?category=21"><img src="./images/Puzzle images/weaving.png"></a></td>
+</tr>
+</table>
+<div id="TITLEFRAME">Applications</div>
+<table>
+<tr>
+<td><a href="http://www.whirled.com/#games-d_3323"><img src="./images/Puzzle images/blockadesim.png"></a></td>
+<td><a href="http://www.dachimpy.com/flashApps.php?id=1"><img src="./images/Puzzle images/distillsim.png"></a></td>
+</tr>
+</table>

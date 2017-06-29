@@ -1,0 +1,321 @@
+body {
+    font-family: Verdana, Arial;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+#wrapper {
+	width: 902px;
+	margin: auto;
+}
+#header_container {
+    width:100%;
+}
+
+#body_container {
+	width: 100%;
+        padding: 3px;
+}
+
+#navigation_container {
+    margin-top: 3px;    
+    color: white;
+    width: 902px;
+    overflow:hidden;
+}
+
+#navigation_container a,
+#navigation_container a:visited,
+#navigation_container a:hover{
+    color: white;
+}
+
+#navigation_container a,
+#navigation_container a:visited{
+    text-decoration: none;
+}
+
+#navigation_container a:hover{
+    text-decoration: underline;
+}
+
+.dropdown_navigation{
+    padding: 0px;
+    margin: 0px;
+    width: 902px;
+    height: 30px;
+    background: #163C6D;
+}
+
+.dropdown_navigation .menu{
+    float:left;
+    background: #163C6D;
+}
+
+.dropdown_navigation .menu .menu_title {
+    padding: 5px;
+}
+
+#navigation_container .menu:hover{
+    background: #1B70E0;
+}
+
+#navigation_container .menu .links{
+    list-style-type:none;
+    padding: 0px;
+    margin: 0px;
+    position:relative;
+    background: #163C6D;
+}
+
+#navigation_container .menu .links_container {
+    position: absolute;
+    padding: -5px;
+    margin: 0px;
+    z-index:999;
+}
+
+#navigation_container .menu .links_container ul {
+    padding: 5px;
+}
+
+#navigation_container .menu .links_container li.empty {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+#footer_container{
+    text-align:center;
+    font-size: 80%;
+}
+
+table {
+	/*border-width:1px;*/
+	border-collapse:collapse;
+}
+
+td {
+    border:1px solid;
+    padding:4px;
+}
+
+h1, h3 {
+    color: #163C6D;
+}
+
+h3 {
+    font-size: 125%;
+}
+
+.sql_text_input {
+    width: 800px;
+}
+
+.hidden {
+    display: none;
+}
+
+div.show_source,
+div.hide_source{
+    color: #036;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+blockquote {
+    background: #e6e6e6;
+    padding: 3px;
+    border-radius: 5;
+    color: #036;
+}
+
+.clear {
+    clear: right;
+}
+
+.description
+{
+	width: 55%;
+	float:left;
+}
+
+.right_float
+{
+	width: 45%;
+	float:right;
+}
+
+.playlist_video{
+    border-radius: 15px;
+    background:lightgrey;
+    padding: 10px;
+    width:99%;
+    margin-bottom: 2px;
+}
+
+.breadcrumb {
+    font-size: 18px;
+}
+
+.breadcrumb span.breadcrumb_arrows {
+    font-size: 70%;
+    font-weight: bold;
+}
+
+#video_information_container {
+    padding: 2px;
+    margin-top: 8px;
+}
+
+
+#slidedeck_frame {
+        width: 890px;
+        height: 400px;
+}
+
+/*************************
+******** Arrows **********
+**************************/	
+div.piracyCarousel .prev{
+	background: url('/libraries/jMyCarousel/img/left.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+div.piracyCarousel .next{
+	background: url('/libraries/jMyCarousel/img/right.png') center center no-repeat;
+	width:40px;
+	height:61px;
+	border:0px;
+}
+div.piracyCarousel .up{
+	background: url('/libraries/jMyCarousel/img/up.png') center center no-repeat;
+	width:61px;
+	height:40px;
+	border:0px;
+}
+
+div.piracyCarousel .down{
+	background: url('/libraries/jMyCarousel/img/down.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+
+
+/** carousel 1 **/
+div.piracyCarousel ul li{
+	border:1px solid #fff;
+	line-height:0px;
+}
+
+div.piracyCarousel ul li a{ /* in case of link */
+	display:block;
+	border:0px;
+}
+
+div.piracyCarousel ul li a img{
+	display:block;
+	border:0px;
+}
+
+/*************************
+******** Arrows **********
+**************************/	
+div.carousingCarousel .prev{
+	background: url('/libraries/jMyCarousel/img/left.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+div.carousingCarousel .next{
+	background: url('/libraries/jMyCarousel/img/right.png') center center no-repeat;
+	width:40px;
+	height:61px;
+	border:0px;
+}
+
+/** carousel 1 **/
+div.carousingCarousel ul li{
+	border:1px solid #fff;
+	line-height:0px;
+}
+
+div.carousingCarousel ul li a{ /* in case of link */
+	display:block;
+	border:0px;
+}
+
+div.carousingCarousel ul li a img{
+	display:block;
+	border:0px;
+}
+
+/*************************
+******** Arrows **********
+**************************/	
+div.craftingCarousel .prev{
+	background: url('/libraries/jMyCarousel/img/left.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+div.craftingCarousel .next{
+	background: url('/libraries/jMyCarousel/img/right.png') center center no-repeat;
+	width:40px;
+	height:61px;
+	border:0px;
+}
+
+
+/** carousel 1 **/
+div.craftingCarousel ul li{
+	border:1px solid #fff;
+	line-height:0px;
+}
+
+div.craftingCarousel ul li a{ /* in case of link */
+	display:block;
+	border:0px;
+}
+
+div.craftingCarousel ul li a img{
+	display:block;
+	border:0px;
+}
+
+/*************************
+******** Arrows **********
+**************************/	
+div.applicationsCarousel .prev{
+	background: url('/libraries/jMyCarousel/img/left.png') center center no-repeat;
+	width:47px;
+	height:61px;
+	border:0px;
+}
+div.applicationsCarousel .next{
+	background: url('/libraries/jMyCarousel/img/right.png') center center no-repeat;
+	width:40px;
+	height:61px;
+	border:0px;
+}
+
+/** carousel 1 **/
+div.applicationsCarousel ul li{
+	border:1px solid #fff;
+	line-height:0px;
+}
+
+div.applicationsCarousel ul li a{ /* in case of link */
+	display:block;
+	border:0px;
+}
+
+div.applicationsCarousel ul li a img{
+	display:block;
+	border:0px;
+}
+

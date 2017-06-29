@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+
+  <head>
+
+    <title>Player</title>
+
+    <style type="text/css">
+      div.playercontainer
+      {
+        position:                       absolute;
+        top:                               200px;
+        left:                              200px;
+        width:                             700px;
+        height:                            320px;
+        border:                              2px;
+        padding:                             2px;
+        border-style:                      solid;
+        border-color:                    #223344;
+        z-index:                             100;
+      }
+
+      div.player
+      {
+        position:                       absolute;
+        top:                               200px;
+        left:                              200px;
+        width:                             700px;
+        height:                            320px;
+      }
+
+      img.logo
+      {
+        position:                       relative;
+        top:                               500px;
+        left:                              450px;
+        width:                             540px;
+        height:                             25px;
+        background-color:            transparent;
+        z-index:                             101;
+      }
+
+      div.buttons
+      {
+        position:                       absolute;
+        top:                               180px;
+        left:                              200px;
+        width:                             700px;
+        height:                             30px;
+      }
+
+      button
+      {
+        position:                       relative;
+        float:                              left;
+        width:                             120px;
+        height:                             20px;
+        font-size:                           8pt;
+        font-family:                       Arial;
+        color:                           #FFFFFF;
+        text-align:                       center;
+        border-style:                      solid;
+        border-color:                    #223344;
+        background-color:                #808080;
+        cursor:                          pointer;
+      }
+    </style>
+    
+    <script type="text/javascript" src="swfobject.js"></script>
+
+    <script type='text/javascript'>
+      var playItem = null;
+
+      function createPlayer()
+      {
+        var flashvars =
+        {
+          width:               '700',
+          height:              '320',
+          displaywidth:        '550',
+          displayheight:       '300',
+          file:                'playlist.xml',
+        //overstretch:         'true',  // expands to fit h & v   "true"  -will stretch them proportionally to fill the display
+          overstretch:         'false', // expands to fit h or v  "false" -will stretch them to fit
+        //overstretch:         'fit',   // expands to fit h & v   "fit"   -will stretch them disproportionally to fit both height and width
+        //overstretch:         'none',  // displays native size   "none"  -will show all items in their original dimensions
+          autostart:           'true',
+          shuffle:             'false',
+          repeat:              'list',
+          showstop:            'true',
+          showicons:           'true',
+          showdigits:          'true',
+          thumbsinplaylist:    'true',
+          logo:                '',
+          enablejs:            'true',
+          javascriptid:        'mpl',
+          searchbar:           'false',
+          backcolor:           '0xFFFFFF', // face of buttons
+          frontcolor:          '0x404040', // button symbols & playlist text
+          lightcolor:          '0x808080', // highlighted playlist item
+          screencolor:         '0x000000'  // screen background color
+        };
+
+        var params =
+        {
+          allowfullscreen:    'true',
+          wmode:              'opaque',
+          swliveconnect:      'true'
+        };
+
+        var attributes =
+        {
+          id:                 'mpl',
+          name:               'mpl'
+        };
+
+        if(swfobject.getQueryParamValue('item'))
+        {
+          playItem = swfobject.getQueryParamValue('item');
+        }
+
+        swfobject.embedSWF('mediaplayer.swf', 'player', '700', '320', '9.0.115', false, flashvars, params, attributes);
+
+      };
+    </script>
+
+    <script type='text/javascript'>
+      function loadFile(swf, obj)
+      {
+        thisMovie(swf).loadFile(obj);
+      };
+
+
+      function thisMovie(movieName)
+      {
+        if(navigator.appName.indexOf('Microsoft') != -1)
+        {
+          return window[movieName];
+        }
+        else
+        {
+          return document[movieName];
+        }
+      };
+    </script>
+
+  </head>
+
+  <body onload="createPlayer();">
+
+    <div id="playercontainer" class="playercontainer">
+      <a id="player" class="player" href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">Get the Flash Plugin to see this gallery.</a>
+    </div>
+
+  </body>
+
+</html>

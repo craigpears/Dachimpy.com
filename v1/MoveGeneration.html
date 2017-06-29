@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Move Generation</title>
+</head>
+
+<body>
+<p><a href="http://www.freewebs.com/dachimpy/BnavGuide.html">Back
+</a></p>
+<p>Moves don't just randomly appear, your crew has to generate them for you. The better your crew does on the duty reports the better your ship will perform.</p>
+<p>Each station contributes one thing towards the ship. Sails generate moves, Carp reduces damage, Bilge reduces bilge.</p>
+<p>The effects of good sails are fairly obvious, the better the sails the more moves you get.<br />
+The effect of damage is that it causes bilge to increase faster, so reducing this means less bilge.  In a blockade/sinking situation max damage also means that you sink.  Damage also means you receive more lines of damage in a swordfight/rumble however this can not be reduced by your puzzlers once it has been taken.<br />
+The effect of bilge is that it reduces the effectiveness of your sailors, the more bilge you have the harder your sailors have to work.</p>
+<p>&nbsp;</p>
+<p>Here are some tables of information taken from the wiki <a href="http://yppedia.puzzlepirates.com/Sloop_pillaging_guide#Carpentry">here</a> to help illustrate things.</p>
+<p>The effects of carpentry</p>
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td><strong>Damage</strong> </td>
+    <td><strong>Bilge Effectiveness</strong> </td>
+    <td><strong>Times more work needed to bilge</strong> </td>
+  </tr>
+  <tr>
+    <td>Empty (0) </td>
+    <td>1 </td>
+    <td>1 </td>
+  </tr>
+  <tr>
+    <td>1/4 </td>
+    <td>.75 </td>
+    <td>1.33 </td>
+  </tr>
+  <tr>
+    <td>1/2 </td>
+    <td>.5 </td>
+    <td>2 </td>
+  </tr>
+  <tr>
+    <td>3/4 </td>
+    <td>.25 </td>
+    <td>4 </td>
+  </tr>
+  <tr>
+    <td>Full (1) </td>
+    <td>0 </td>
+    <td>Bilging does nothing</td>
+  </tr>
+</table>
+<p>The effects of bilge</p>
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td><strong>Bilge</strong> </td>
+    <td><strong>Sailing Effectiveness</strong> </td>
+    <td><strong>Times more work needed to sail</strong> </td>
+  </tr>
+  <tr>
+    <td><div align="center">Empty (0) </div></td>
+    <td><div align="center">1 </div></td>
+    <td><div align="center">1 </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">1/4 </div></td>
+    <td><div align="center">.83 </div></td>
+    <td><div align="center">1.2 </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">1/2 </div></td>
+    <td><div align="center">.67 </div></td>
+    <td><div align="center">1.5 </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">3/4 </div></td>
+    <td><div align="center">.5 </div></td>
+    <td><div align="center">2 </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">Full (1) </div></td>
+    <td><div align="center">.33 </div></td>
+    <td><div align="center">3</div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>I will however disagree with some of this information. Firstly it is possible to keep the bilge from coming in with max damage provided every single bilger is sparkly and never drops from that sparkle.</p>
+<p>This is more for curiosity than something you need to know but I find that once you get to a higher level it is good to know how a ship works, information can be found <a href="http://forums.puzzlepirates.com/community/mvnforum/viewthread?thread=73211">here</a> on the mechanics behind move generation, damage repair and bilge. Alot of the simulator maths was based on the information in that thread, however in simplified forms to make it easier to code.</p>
+<p>&nbsp;</p>
+<p>Priorities</p>
+<p>Your first priority usually should be keeping the damage down to a level where bilge does not begin to rise, this amount depends on how good your bilgers are. Once it passes that point however bilging is fairly pointless - just because you see full bilge doesn't mean you should be bilging. Before you can get bilge under control you must first get damage under control.</p>
+<p>If damage and bilge are low then sails should be where you concentrate so you get as many moves as possible.</p>
+<p>&nbsp;</p>
+<p>Selecting what tokens you want to generate<br />
+  <img src="http://img241.imageshack.us/img241/3624/movegenerationselectiongd6.png" alt="Image Hosted by ImageShack.us"/>
+    <br />
+Sailors obviously generate tokens, but which tokens get generated? There are two ways to decide this, the default is auto move generation and the second option is for you do decide.<br />
+Auto move generation simply prioritises the tokens in the order of Forwards, Lefts and then Rights.  Whichever is the lowest gets the priority, if there is an even amount then the one higher up the priority list gets generated first.  Note that the moves you have placed also count towards this decision, for example if you have two of each move and place all of your left's, auto move generation will still generate a forward until the move is executed and the tokens are actually used.</p>
+<p>If there is a certain token that you want, for example you are planning on using all your right tokens and want to make sure you start the next turn with at least one then you can choose which is to be generated. But remember to turn auto moves back on! It is very easy to get distracted and you can look back and find out you have nothing but ten right turns which can get you into a horrible mess. To generate the moves you want there are three circles above each move, simply click the circle above the move you want and then un-check the auto moves box.</p>
+<p>&nbsp;</p>
+<p>Tokens Expiring</p>
+<p>Tokens don't stay there forever, they expire. A token will be there for you to use for up to four turns, to find out when a move is about to expire hover over the relevant tokens and a list will appear, the left most number is the amount of tokens that are about to expire at the end of the turn, the next number will be the turn after that and so forth. (Note that my simulators do not yet incorporate move expiration)</p>
+<p>&nbsp;  </p>
+<p>UNDER CONSTRUCTION </p>
+<p>Practice Simulator</p>
+<p>Note: Auto move generation is not the same as in YPP, it depends on what moves you have remaining to use and doesn't account those you have placed(will be updated soon). Some calculations may have been simplified, bilge's effectiveness on sails only has 5 levels to make it simpler for example. This simulator therefore obviously isn't completed but its only small gaps that need to be done. </p>
+<p>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="576" height="576">
+    <param name="movie" value="MoveGenerationEtc.swf" />
+    <param name="quality" value="high" />
+    <embed src="MoveGenerationEtc.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="576" height="576"></embed>
+  </object>
+  <br />
+</p>
+<p>&nbsp; </p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</body>
+
+</html>
